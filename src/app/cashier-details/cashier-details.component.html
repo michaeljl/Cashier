@@ -1,0 +1,19 @@
+<div *ngIf ="assigned">
+	<h2>{{ assigned.name | uppercase }}'s Personal Details</h2>
+
+	<div>
+		<span>id: </span>{{ assigned.id }}
+	</div>
+	<div>
+		<span>name: </span>{{ assigned.name }}
+	</div>
+	<br>
+	Edit Details:
+	<div>
+		<label>name: <input [(ngModel)]="assigned.name"
+			placeholder="name">
+		</label>
+	</div>
+</div>
+<button (click)="goBack()">go back</button>
+<button (click)="save()">save</button>
